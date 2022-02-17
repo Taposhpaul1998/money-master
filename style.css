@@ -5,12 +5,15 @@
 h1,h2,h5{
     font-family: 'Roboto Slab', serif;
 }
+/* conteiner */
 .conteiner{
     width: 80%;
     margin: auto;
     padding: 40px 0px;
     padding-bottom: 10px;
 }
+/* header-title */
+
 h1.header-title {
     text-align: center;
     font-size: 38px;
@@ -25,13 +28,15 @@ img#title-logo {
     display: flex;
     justify-content: space-between;
 }
+/* calculate-img */
 .calculate-img {
     background-image: url(images/bg.jpg);
     background-position: center;
     background-repeat: no-repeat;
-    width: 500px;
+    width: 550px;
     background-size: cover;
 }
+/* calculate-monay */
 .calculate-monay {
     width: 500px;
     background-color: #e3e3e361;
@@ -47,12 +52,14 @@ h5.calculate-title {
     font-weight: 700;
     padding: 10px 0px;
 }
+/* input-title */
 label.input-title {
     font-size: 15px;
     font-weight: 600;
     color: #4e4e4e;
     padding-right: 5px;
 }
+/* input monay */
 input.input-monay {
     padding: 12px;
     background-color: #7c797957;
@@ -80,4 +87,21 @@ button.calculate-btn {
 button#sevingBtn {
     margin-right: 60px;
     margin-left: 10px;
+}
+/* error massege */
+.error {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 auto;
+    background: #222436;
+    margin-top: 20px;
+    border-radius: 15px;
+    padding: 5px 20px;
+    display: none;
+}
+.error-msg{
+    width: 400px;
+    margin: 0 auto;
 }

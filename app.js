@@ -7,15 +7,6 @@ function getInputValue(InputId) {
 
 }
 
-// error input 
-function erroreInput() {
-    const inputsFild = document.getElementsByClassName('input-monay');
-    for (const inputs of inputsFild) {
-        const inputText = inputs.value;
-        return inputText;
-    }
-}
-
 // Expenses area 
 function monayExpenses() {
     const foodMonay = getInputValue('foodAmaound');
@@ -33,7 +24,7 @@ function getcalculate() {
     const incomeMonay = getInputValue('totleIncome');
 
     if (totleExpensesMonay > incomeMonay) {
-        alert('hi');
+        document.getElementById('error-amaount').style.display = 'block';
     }
     else {
         // totle Expenses Amaount
@@ -46,13 +37,54 @@ function getcalculate() {
 
 // calculate button 
 document.getElementById('calculateBtn').addEventListener('click', function () {
-    const inputError = erroreInput();
-    if (inputError > 0 && inputError != 'number') {
-        alert('Taposh')
-    }
-    else {
+    const incomeMonay = getInputValue('totleIncome');
+    const foodMonay = getInputValue('foodAmaound');
+    const rentMonay = getInputValue('rentAmaount');
+    const clothesMonay = getInputValue('clothesAmaount');
+    if (foodMonay > 0 && rentMonay > 0 && clothesMonay > 0 && incomeMonay > 0) {
         getcalculate()
     }
+    else {
 
+        document.getElementById('error-input').style.display = 'block';
+    }
 })
 
+// saving amaount 
+function savingMonay() {
+    const incomeMonay = getInputValue('totleIncome');
+    const saving = getInputValue('save-monay');
+    const savingAmaount = incomeMonay * saving / 100;
+    return savingAmaount;
+}
+
+// remaining balance 
+function remainingBalance() {
+    const totleExpensesMonay = monayExpenses();
+    const incomeMonay = getInputValue('totleIncome');
+    const totleAmaount = incomeMonay - totleExpensesMonay;
+    const savingBalance = savingMonay();
+    const savingAmaountFild = document.getElementById('saving');
+    const remainingAmaountFild = document.getElementById('remainingBalace');
+    if (savingBalance < totleAmaount) {
+        // saving amaount
+        savingAmaountFild.innerText = savingBalance;
+
+        // remaining balance 
+        remainingAmaountFild.innerText = totleAmaount - savingBalance;
+    }
+    else {
+        document.getElementById('error-amaount').style.display = 'block';
+    }
+}
+
+// save button 
+document.getElementById('sevingBtn').addEventListener('click', function () {
+    const saving = getInputValue('save-monay');
+    if (saving > 0) {
+        remainingBalance()
+    }
+    else {
+        document.getElementById('error-input').style.display = 'block';
+    }
+})

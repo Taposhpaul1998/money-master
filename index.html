@@ -12,6 +12,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lobster&family=Poppins:wght@200;300;400;500;600;800&family=Roboto+Slab&family=Roboto:wght@500;700&family=Source+Sans+Pro&display=swap"
         rel="stylesheet">
+
     <!-- stylesheet  -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -51,14 +52,18 @@
                         <input id="clothesAmaount" class="input-monay" value="1500" type="text">
                         <br>
                         <button id="calculateBtn" class="calculate-btn">Calculate</button>
-                        <h5 class="calculate-title">Total Expenses: <span id="totleExpanses">5500</span></h5>
-                        <h5 class="calculate-title">Balance: <span id="totleBalance">4500</span></h5>
+                        <div class="error-msg">
+                            <p id="error-amaount" class="error"> Please type carent amaount</p>
+                            <p id="error-input" class="error">Please type positive number</p>
+                        </div>
+                        <h5 class="calculate-title">Total Expenses: <span id="totleExpanses">4500</span></h5>
+                        <h5 class="calculate-title">Balance: <span id="totleBalance">5500</span></h5>
                         <!-- Saving monay  -->
                         <label class="input-title" for="">Save: </label>
                         <input id="save-monay" class="input-monay" value="10" type="text"><span>%</span>
                         <button id="sevingBtn" class="calculate-btn">Save</button>
-                        <h5 class="calculate-title">Saving Amount: <span>2500</span></h5>
-                        <h5 class="calculate-title">Remaining Balance: <span>2000</span></h5>
+                        <h5 class="calculate-title">Saving Amount: <span id="saving">2500</span></h5>
+                        <h5 class="calculate-title">Remaining Balance: <span id="remainingBalace">2000</span></h5>
                     </div>
                 </div>
             </div>
