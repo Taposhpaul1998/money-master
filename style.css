@@ -36,13 +36,14 @@ img#title-logo {
     width: 500px;
     background-color: #e3e3e361;
 }
-form.calculate-from {
+.calculate-from {
     padding: 45px;
-    text-align: center;
+    text-align: right;
 }
 h5.calculate-title {
     font-size: 20px;
-    color: #000000e0;;
+    color: #000000e0;
+    text-align: center;
     font-weight: 700;
     padding: 10px 0px;
 }
@@ -56,8 +57,11 @@ input.input-monay {
     padding: 12px;
     background-color: #7c797957;
     border: none;
+    font-size: 13px;
+    font-weight: 600;
     margin-bottom: 15px;
     border-radius: 3px;
+    margin-right: 85px;
 }
 input#save-monay {
     width: 90px;
@@ -70,5 +74,10 @@ button.calculate-btn {
     color: #fbf7ef;
     padding: 10px 35px;
     border: none;
+    margin-right: 120px;
     border-radius: 3px;
+}
+button#sevingBtn {
+    margin-right: 60px;
+    margin-left: 10px;
 }
