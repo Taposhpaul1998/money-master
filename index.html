@@ -5,47 +5,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calculate Saving Money</title>
+    <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lobster&family=Poppins:wght@200;300;400;500;600;800&family=Roboto+Slab&family=Roboto:wght@500;700&family=Source+Sans+Pro&display=swap"
+        rel="stylesheet">
     <!-- stylesheet  -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <header>
+        <section class="conteiner">
+            <h1 class="header-title">Calculate Saving Money <img id="title-logo" src="images/monay.png" alt=""></h1>
+        </section>
+    </header>
     <main>
         <section class="conteiner">
-            <h2 class="-title">Calculate Saving Money <img src="images/monay.png" alt=""></h2>
             <div class="conteiners">
-                <div class="bg-image">
-                    <img src="images/bg.jpg" alt="">
+                <div class="calculate-img">
+
                 </div>
-                <div class="money-calculate">
-                    <div class="calculate-expenses">
-                        <div class="incame">
-                            <h3 class="Calculate-title">Income</h3>
-                            <h4>Income:<input type="text"> </h4>
-                        </div>
-                        <div class="expenses">
-                            <h3 class="Calculate-title">Expenses</h3>
-                            <h4>Income:<input type="text"></h4>
-                            <h4>Rent:<input type="text"></h4>
-                            <h4>Clothes:<input type="text"></h4>
-                            <button class="submit-btn" type="submit">Calculate</button>
-                        </div>
-                        <div class="totle-amaount">
-                            <h3 class="Calculate-title">Total Expenses:<span> 5500 </span></h3>
-                            <h3 class="Calculate-title">Balance:<span> 4500 </span></h3>
-                        </div>
-                    </div>
-                    <div class="seving-calculate">
-                        <div class="saving">
-                            <h4>Clothes:<input type="text"> %</h4> <button class="submit-btn"
-                                type="submit">Calculate</button>
-                        </div>
-                        <div class="totle-amaount">
-                            <h3 class="Calculate-title">Saving Amount:<span> 5500 </span></h3>
-                            <h3 class="Calculate-title">Remaining Balance:<span> 4500 </span></h3>
-                        </div>
-                    </div>
+                <div class="calculate-monay">
+                    <form class="calculate-from">
+                        <h5 class="calculate-title">Income</h5>
+                        <label class="input-title" for="">Income: </label>
+                        <input class="input-monay" type="text">
+                        <h5 class="calculate-title">Expenses</h5>
+                        <label class="input-title" for="">Food: </label>
+                        <input class="input-monay" type="text">
+                        <br>
+                        <label class="input-title" for="">Rent: </label>
+                        <input class="input-monay" type="text">
+                        <br>
+                        <label class="input-title" for="">Clothes: </label>
+                        <input class="input-monay" type="text">
+                        <br>
+                        <button class="calculate-btn" type="submit">Calculate</button>
+                        <h5 class="calculate-title">Total Expenses: <span>5500</span></h5>
+                        <h5 class="calculate-title">Balance: <span>4500</span></h5>
+                        <label class="input-title" for="">Save: </label>
+                        <input id="save-monay" class="input-monay" type="text"><span>%</span>
+                        <button class="calculate-btn" type="submit">Save</button>
+                        <h5 class="calculate-title">Saving Amount: <span>2500</span></h5>
+                        <h5 class="calculate-title">Remaining Balance: <span>2000</span></h5>
+                    </form>
                 </div>
             </div>
         </section>
